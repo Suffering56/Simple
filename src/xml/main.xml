@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame  xmlns="http://www.swixml.org/2007/Swixml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.swixml.org/2007/Swixml http://www.swixml.org/2007/swixml.xsd" 
+        id="mainFrame" Resizable="false" size="630,400" plaf='com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel'
+        title="Hello SWIXML World" defaultCloseOperation="JFrame.EXIT_ON_CLOSE">
+    
+    <panel id="headerPanel" constraints="BorderLayout.NORTH">
+        <headerLabel id = "header" text="Header"/>
+    </panel>
+    
+    <panel constraints="BorderLayout.WEST" border = "LineBorder">
+        <panel Layout="GridLayout(0, 1, 17, 7)" border="EmptyBorder(7,7,7,7)">
+            <button Text="Common" Action="switchContent" ActionCommand="0"/>
+            <button Text="Table" Action="switchContent" ActionCommand="1"/>
+            <button Text="Calendar" Action="switchContent" ActionCommand="2"/>
+            <button Text="Media" Action="switchContent" ActionCommand="3"/>
+        </panel>
+    </panel>
+    
+    <scrollpane id="contentScroll" HorizontalScrollBarPolicy = "JScrollPane.HORIZONTAL_SCROLLBAR_NEVER"
+                VerticalScrollBarPolicy="JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED"> 
+        <panel id="contentPanel" Layout="FlowLayout(FlowLayout.LEFT)" constraints="BorderLayout.CENTER">
+            <panel id = "commonPanel" include="xml/content.xml#Common" visible = "true"/>
+            <panel id = "tablePanel" include="xml/content.xml#Table" visible = "false"/>
+            <panel id = "calendarPanel" include="xml/content.xml#Calendar" visible = "false"/>
+            <panel id = "mediaPanel" include="xml/content.xml#Media" visible = "false"/>
+        </panel>
+    </scrollpane> 
+    
+    <panel id="footerPanel" constraints="BorderLayout.SOUTH">
+        <label text = "footer"/>
+    </panel>
+</frame>

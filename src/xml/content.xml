@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <panel id="Common">
+        <panel Layout = "GridBagLayout"> 
+            <gridbagconstraints id="initGBC" fill = "GridBagConstraints.HORIZONTAL" insets="5,5,5,5"/>
+            <!-- ==================Required Fields================== -->
+            <label text="Required Fields">
+                <gridbagconstraints gridx="0" gridy="0" gridwidth="2" anchor="GridBagConstraints.CENTER"/>
+            </label>
+            
+            <label text="user name:">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="1"/>
+            </label>
+            <textfield id="userNameField" columns = "10" text="">
+                <gridbagconstraints use="initGBC" gridx="1" gridy="1"/>
+            </textfield>
+            
+            <label text="e-mail:">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="2"/>
+            </label>
+            <textfield id="eMailField" columns = "10" text="">
+                <gridbagconstraints use="initGBC" gridx="1" gridy="2"/>
+            </textfield>
+            
+            <label text="password:">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="3"/>
+            </label>
+            <passwordfield id="passwordField" columns = "10" text="">
+                <gridbagconstraints use="initGBC" gridx="1" gridy="3"/>
+            </passwordfield>
+            
+            <label text="confirm pass:">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="4"/>
+            </label>
+            <passwordfield id="confirmField" columns = "10" text="">
+                <gridbagconstraints use="initGBC" gridx="1" gridy="4"/>
+            </passwordfield>
+            
+            <!-- ==================Optional Fields================== -->
+            <label text="Optional Fields">
+                <gridbagconstraints gridx="2" gridy="0" gridwidth="2" anchor="GridBagConstraints.CENTER"/>
+            </label>
+            
+            <label text="age:">
+                <gridbagconstraints use="initGBC" gridx="2" gridy="1"/>
+            </label>
+            <spinner id="ageSpinner">
+                <gridbagconstraints use="initGBC" gridx="3" gridy="1"/>
+            </spinner>
+            
+            <label text="gender:">
+                <gridbagconstraints use="initGBC" gridx="2" gridy="2"/>
+            </label>
+            <vbox>
+                <gridbagconstraints use="initGBC" gridx="3" gridy="2"/>
+                <buttongroup id="genderGroup">
+                    <radiobutton text="male" actionCommand="male" selected="true"/>
+                    <radiobutton text="female" actionCommand="female"/>
+                </buttongroup>
+            </vbox>
+            
+            <label text="favorite color:">
+                <gridbagconstraints use="initGBC" gridx="2" gridy="3"/>
+            </label>
+            <combobox id="colorComboBox" initclass="simple.ColorModel">
+                <gridbagconstraints use="initGBC" gridx="3" gridy="3"/>
+            </combobox>
+            
+            <label text="hide profile?:">
+                <gridbagconstraints use="initGBC" gridx="2" gridy="4"/>
+            </label>
+            <checkbox id="hideProfileCheckBox">
+                <gridbagconstraints use="initGBC" gridx="3" gridy="4"/>
+            </checkbox>
+            
+            <button id="commonSubmitBtn" text="Submit">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="5" gridwidth="4"/>
+            </button>
+        </panel>
+    </panel>
+    
+    <panel id="Table">
+        <panel Layout = "GridBagLayout">
+            <table id="reportTable" ShowGrid="true" enabled="false">  
+                <gridbagconstraints  insets="5,5,25,5" fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="0"/>
+            </table>
+            <button id="reportClearBtn" text="Clear">
+                <gridbagconstraints fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="1"/>
+            </button>
+        </panel>
+    </panel>
+    
+    
+    <panel id="Calendar">
+        <vbox>
+            <headerLabel id="selectedDateLabel" border="EmptyBorder(0,0,5,0)"/>
+            <calendar id = "jCalendar" initclass = "java.util.Date"/>
+        </vbox>
+    </panel>
+    
+    
+    <panel id="Media">
+        <vbox>
+            <label font="Georgia-BOLD-20" text="Second"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Second"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Second"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Second"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+            <label font="Georgia-BOLD-20" text="Content"/>
+        </vbox>
+    </panel>
+</doc>
