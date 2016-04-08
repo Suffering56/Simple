@@ -39,6 +39,17 @@ public class Main {
         init();
     }
 
+    //Registration submit button
+    private void regSubmitBtnActionPerformed(ActionEvent evt) {
+        reg.submit();
+    }
+
+    //Report clear button
+    private void reportClearBtnActionPerformed(ActionEvent evt) {
+        reportModel.setRowCount(1);
+    }
+
+    //Calendar
     private void jCalendarListener(PropertyChangeEvent evt) {
         Calendar c = Calendar.getInstance();
         c.setTime(jCalendar.getDate());
@@ -50,14 +61,7 @@ public class Main {
         return new Formatter().format("%1$td-%1$tm-%1$tY", c).toString();
     }
 
-    private void regSubmitBtnActionPerformed(ActionEvent evt) {
-        reg.submit();
-    }
-
-    private void reportClearBtnActionPerformed(ActionEvent evt) {
-        reportModel.setRowCount(1);
-    }
-
+    //Media
     private void nextImageBtnActionPerformed(ActionEvent evt) {
         currentImageId++;
         if (currentImageId > 5) {
@@ -90,6 +94,7 @@ public class Main {
         }
     }
 
+    //Left-sidebar(WEST) buttons (Registration, Report, Calendar, Media)
     public Action switchContent = new AbstractAction() {
         @Override
         public void actionPerformed(ActionEvent e) {

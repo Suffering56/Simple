@@ -8,11 +8,17 @@ public class Registration {
     }
 
     public void submit() {
-        boolean correct = isRequiredCorrect();
-        if (!main.requiredCheckBox.isSelected()) {
-            correct = true;
-            main.errorMsgLabel.setText(null);
+        main.errorMsgLabel.setText(null);
+        boolean correct = true;
+
+        /**
+         * Если стоит галочка "Required Correct", то выполняем проверку для
+         * обязательных полей.
+         */
+        if (main.requiredCheckBox.isSelected()) {
+            correct = isRequiredCorrect();
         }
+
         if (correct) {
             String profileStatus = "show";
             if (main.hideProfileCheckBox.isSelected()) {
@@ -29,8 +35,11 @@ public class Registration {
         clearForm();
     }
 
+    /**
+     * Проверка обязательных полей
+     * @return true - если все поля заполнены корректно; иначе - false.
+     */
     private boolean isRequiredCorrect() {
-        main.errorMsgLabel.setText(null);
         boolean correct = true;
         String errorMsg = "Required error: ";
         if (main.userNameField.getText().isEmpty()) {
