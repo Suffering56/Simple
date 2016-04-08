@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <panel id="doc">
+        <panel Layout = "GridBagLayout">
+            <table id="reportTable" ShowGrid="true" enabled="false">  
+                <gridbagconstraints  insets="5,5,25,5" fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="0"/>
+            </table>
+            <button id="reportClearBtn" text="Clear">
+                <gridbagconstraints fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="1"/>
+            </button>
+        </panel>
+    </panel>
+</doc>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <panel id="doc">
+        <vbox>
+            <headerLabel id="selectedDateLabel" border="EmptyBorder(0,0,5,0)"/>
+            <calendar id = "jCalendar" initclass = "java.util.Date"/>
+        </vbox>
+    </panel>
+</doc>
+

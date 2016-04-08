@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
-    <panel id="Common">
+    <panel id="doc">
         <panel Layout = "GridBagLayout"> 
             <gridbagconstraints id="initGBC" fill = "GridBagConstraints.HORIZONTAL" insets="5,5,5,5"/>
             <!-- ==================Required Fields================== -->
@@ -73,50 +73,13 @@
                 <gridbagconstraints use="initGBC" gridx="3" gridy="4"/>
             </checkbox>
             
-            <button id="commonSubmitBtn" text="Submit">
-                <gridbagconstraints use="initGBC" gridx="0" gridy="5" gridwidth="4"/>
+            <button id="regSubmitBtn" text="Submit">
+                <gridbagconstraints use="initGBC" gridx="0" gridy="5" gridwidth="3"/>
             </button>
+            <checkbox id="requiredCheckBox" text="required check" selected="true">
+                <gridbagconstraints use="initGBC" gridx="3" gridy="5"/>
+            </checkbox>
         </panel>
-    </panel>
-    
-    <panel id="Table">
-        <panel Layout = "GridBagLayout">
-            <table id="reportTable" ShowGrid="true" enabled="false">  
-                <gridbagconstraints  insets="5,5,25,5" fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="0"/>
-            </table>
-            <button id="reportClearBtn" text="Clear">
-                <gridbagconstraints fill = "GridBagConstraints.HORIZONTAL" gridx="0" gridy="1"/>
-            </button>
-        </panel>
-    </panel>
-    
-    
-    <panel id="Calendar">
-        <vbox>
-            <headerLabel id="selectedDateLabel" border="EmptyBorder(0,0,5,0)"/>
-            <calendar id = "jCalendar" initclass = "java.util.Date"/>
-        </vbox>
-    </panel>
-    
-    
-    <panel id="Media">
-        <vbox>
-            <label font="Georgia-BOLD-20" text="Second"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Second"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Second"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Second"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-            <label font="Georgia-BOLD-20" text="Content"/>
-        </vbox>
     </panel>
 </doc>
+

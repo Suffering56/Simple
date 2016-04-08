@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <panel id="doc">
+        <panel Layout="GridBagLayout">
+            <label id="imgLabel">
+                <gridbagconstraints gridx="0" gridy="0" gridwidth="2"/>
+            </label>
+            <button id="prevImageBtn" text="prev">
+                <gridbagconstraints id = "prevStyle" gridx="0" gridy="1"/>
+            </button>
+            <button id="nextImageBtn" text="next">
+                <gridbagconstraints use = "prevStyle" gridx="1"/>
+            </button>
+        </panel>
+    </panel>
+</doc>
