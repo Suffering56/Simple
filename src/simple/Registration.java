@@ -1,7 +1,5 @@
 package simple;
 
-import java.util.Arrays;
-
 public class Registration {
 
     public Registration(Main main) {

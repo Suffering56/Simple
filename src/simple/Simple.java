@@ -1,7 +1,6 @@
 package simple;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class Simple {
 
@@ -9,7 +8,7 @@ public class Simple {
         try {
             new Main();
         } catch (Exception ex) {
-            Logger.getLogger(Simple.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex, "simple.main()", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
